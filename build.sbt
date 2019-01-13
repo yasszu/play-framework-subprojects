@@ -9,7 +9,7 @@ lazy val root = (project in file("."))
   .dependsOn(search)
   .aggregate(search)
 
-lazy val search = PlayProject("search")
+lazy val search = PlayProject("github-app")
   .settings(libraryDependencies ++= Seq(guice, ws,  scalaTest))
 
 lazy val commonSettings = Seq(

@@ -26,6 +26,12 @@ $ sbt
 
 ```
 
+## API Endpoints
+### GET /github/search
+[http://localhost:9000/github/search?q=scala](http://localhost:9000/github/search?q=scala)
+
+
+
 ## Refs
 ### Create new application
 https://www.playframework.com/documentation/2.6.x/SBTSubProjects

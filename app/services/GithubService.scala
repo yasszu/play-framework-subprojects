@@ -5,12 +5,12 @@ import play.api.libs.ws.{WSClient, WSResponse}
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class SearchService @Inject()(configuration: play.api.Configuration, ws: WSClient)(implicit val exec: ExecutionContext) {
+class GithubService @Inject()(configuration: play.api.Configuration, ws: WSClient)(implicit val exec: ExecutionContext) {
 
-  val searchURL: String = configuration.get[String]("url.api.search")
+  val URL: String = configuration.get[String]("url.api.github")
 
   def request(q: String): Future[WSResponse] = {
-    ws.url(s"$searchURL/search")
+    ws.url(s"$URL/search")
       .withHttpHeaders("Contest-Type" -> "application/json")
       .withQueryStringParameters("q" -> q)
       .get()

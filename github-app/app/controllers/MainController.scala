@@ -11,7 +11,7 @@ import scala.concurrent.ExecutionContext
 class MainController @Inject()(cc: ControllerComponents, ws: WSClient)(implicit val exec: ExecutionContext) extends AbstractController(cc) {
 
   def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    Ok("Welcome to search app")
+    Ok("Welcome to github-app")
   }
 
   def search(q: String, limit: Int = 10, page: Int = 1): Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>

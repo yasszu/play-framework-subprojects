@@ -5,4 +5,5 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.MainController.index
-GET     /search                     controllers.MainController.search(q:String)
+
+GET     /search              controllers.MainController.search(q:String)
